@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+
+  <a (click)="initiateRecording()" class="btn btn-primary" *ngIf="!recording"> Start Recording </a>
+    <a (click)="stopRecording()" class="btn btn-danger" *ngIf="recording"> Stop Recording </a>
+    <div class="clearfix"></div>
+    <audio controls="" *ngIf="url">
+        <source [src]="sanitize(url)" type="audio/wav">
+    </audio>
+
+</div>
